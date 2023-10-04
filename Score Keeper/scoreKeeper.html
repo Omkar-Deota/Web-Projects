@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCORE KEEPER</title>
+    <style>
+        .winner {
+            color: green;
+        }
+
+        .loser {
+            color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+
+    <div class="container" style="width: 900px; height: 300px;">
+        <div class="" style="background-color: cornflowerblue; border: 2px solid black; margin-top: 3.5rem;">
+            <div class="column is-half is-offset-one-quarter">
+                <div class="card" style="border: 5px solid black; padding: 5px; border-radius: 22px; background-color: antiquewhite;">
+                    <div class="card-image" >
+                        <figure class="image is-2by1" >
+                            <img src="/Score Keeper/img/quiz.jpg" height="200px" width="200px" style="border-radius: 80px 80px 0px 0px">
+                        </figure>
+                    </div>
+                    <header class="card-header">
+                        <p class="card-header-title" style="justify-content: center; text-decoration: overline; ">
+                            QUIZ SCORE KEEPER
+                        </p>
+
+                    </header>
+                    <div class="card-content" style="">
+                        <div class="content">
+                            <h1 class="title is-1"><span id="p1Display">0 </span> v/s <span id="p2Display"> 0</span>
+                            </h1>
+                            <p class="subtitile" style="font-weight: bold;">|| Use the button below to keep track of
+                                scores ||</p>
+                            <label for="playupto" class="label is-large is-inline">Playing to</label>
+
+                            <div class="select is-rounded">
+
+                                <select name="scoreTrack" id="playupto">
+                                    <option value="3">3</option>
+                                    <option value="5">5</option>
+                                    <option value="7">7</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button id="p1button" class="is-primary button card-footer-item">+1 Player One</button>
+                        <button id="p2button" class="is-info button card-footer-item">+1 Player Two</button>
+                        <button id="reset" class="is-danger button card-footer-item">Reset</button>
+
+                    </footer>
+                </div>
+
+            </div>
+            
+        <footer>
+            &copy;Omkar Deota
+        </footer>  
+    </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+    
+</body>
+
+</html>
