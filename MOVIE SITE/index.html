@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Site</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        *{
+    box-sizing: border-box;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: inline;
+    
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+body{
+    background-color: #022004;
+    font-family: sans-serif;
+}
+h3{
+    color: rgb(241, 241, 246);
+}
+.topnav{
+    overflow: hidden;
+    background-color: #13172000;
+    padding: 10px;
+}
+.topnav a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.topnav .search-container{
+    float: right;
+
+
+}
+
+
+form{
+    background-color: #151f30;
+    width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+}
+
+input{
+    all: unset;
+    font: 15px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
+}
+
+.thumbnail{
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+}
+.container{
+    
+    float: left;
+    width: 25%;
+    padding: 10px 10px;
+}
+.card{
+   border-radius: 20px;
+   padding: 2px;
+   text-align: center;
+   background-color: rgb(7, 83, 87);
+}
+
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#">Movies Site</a>
+        <div class="search-container">
+            <form role="search" id="form">
+            <input type="text" id="query" name="q" placeholder="Search...">
+        </form>
+        </div>
+    </div>
+    
+    <section id="section" >
+      
+    </section>
+    
+</div>
+</body>
+
+<script src="about.js"></script>
+</html>
