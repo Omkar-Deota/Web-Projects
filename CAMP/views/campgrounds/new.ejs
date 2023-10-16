@@ -1,0 +1,45 @@
+<style>
+h1{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+</style>
+<%layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">New campground</h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds" method="post">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" id="title" name="campground[title]" placeholder="title">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="campground[location]" placeholder="location">
+                </div>
+                <div class="mb-3">
+                    
+                    <label class="form-label" for="image">Image URL</label>
+                    <input class="form-control" type="text" id="image" name="campground[image]" placeholder="image url">
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">$</span>
+                        <input type="text" class="form-control" placeholder="0" id="price" aria-label="price" aria-describedby="price-label" aria-placeholder="price">
+                      </div>
+
+                </div>
+                <div class="mb-3">
+                    
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="textarea" id="description" name="campground[description]" placeholder="description"></textarea>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-success">ADD campground</button></div>
+            </form>
+            <a href="/campgrounds">ALL campgrounds</a>
+        </div>    
+    </div>

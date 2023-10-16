@@ -1,0 +1,69 @@
+<style>
+    
+    .row{
+    
+        padding: 10px;
+        margin-top: 10px;
+        
+    }
+    h5{
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.5rem;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    p{
+        font-size: 1rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    p small{
+        font: bold;
+    }
+    #b1{
+        float: right;
+        margin-top: 100px;
+        
+    }
+    h2{
+        text-align: center;
+        color: white;
+        text-decoration: underline;
+    }
+    #a1{
+        background-color: rgb(215, 222, 224);
+        color: black;
+        padding: 4px;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-bottom: 5px;
+    }
+</style>
+
+<%layout('layouts/boilerplate')%>
+    <h2>ALL CAMPGROUNDS</h2>
+    <div style="margin-bottom: 5px;">
+        <a href="/campgrounds/new" id="a1">Add new campground</a>
+    </div>
+    
+    <%for(let campground of campgrounds){%>
+        <div class="card" mb-3>
+            <div class="row">
+                <di class="col-md-4">
+                    <img class="img-fluid" alt="" src="<%=campground.image%>">
+                </di>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=campground.title%></h5>
+                        <p class="card-text"><%=campground.description%></p>
+                        <p class="card-text">
+                            <small >Location: <%=campground.location%></small>
+                        </p>
+                        <a href="/campgrounds/<%=campground.id%>" class="btn btn-primary" id="b1">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <%}%>
+    
